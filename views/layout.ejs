@@ -14,26 +14,30 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Page Navigation -->
-    <nav class="navbar custom-navbar navbar-expand-md navbar-light bg-primary sticky-top">
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light bg-primary fixed-top">
         <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/imgs/logo.svg" alt="logo">
+            </a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">                     
+                <ul class="navbar-nav ml-auto">                     
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">login</a>
+                        <a class="nav-link" href="auth/google">login</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- End Of Page Navigation -->
-    
+
     <%- body %>
+
     <!-- Page Footer -->
     <footer class="page-footer">
         <div class="container">
