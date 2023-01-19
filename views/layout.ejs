@@ -27,9 +27,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
+                    <% if (isAuthenticated){ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="auth/logout">logout</a>
+                        </li>
+                    <% } else{ %>    
                     <li class="nav-item">
                         <a class="nav-link" href="auth/google">login</a>
                     </li>
+                    <% } %>
                 </ul>
             </div>
         </div>

@@ -1,6 +1,14 @@
+const Blog = require("../models/Blog")
+
 const getIndex = async(req,res) => {
     try{
-        res.status(200).render("index")
+        const blogs = await Blog.find()
+        const featuredBlogs = await Blog.find({featured:true})
+        res.status(200).render("index",{
+            isAuthenticated:req.isAuthenticated(),
+            blogs,
+            featuredBlogs
+        })
     }catch(err){
         console.log(err)
         res.status(500).render("error/500")
