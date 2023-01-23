@@ -17,6 +17,10 @@ const BlogSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    tag:{
+        type:String,
+        default:"post"
+    },
     featured:{
         type:Boolean,
         default:false

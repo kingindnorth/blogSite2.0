@@ -11595,7 +11595,7 @@ textarea.form-control {
 
 .page-header {
   position: relative;
-  background: url(../imgs/header.jpg) no-repeat center top fixed;
+  background: url("../imgs/nextjs.png") no-repeat center top fixed;
   background-size: cover;
   height: 450px;
 }
