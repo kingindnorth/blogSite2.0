@@ -1,7 +1,9 @@
 const router = require("express").Router()
 
-const createBlog = require("../controllers/blog")
+const {createBlog, deleteBlog} = require("../controllers/blog")
  
-router.post("/createBlog", )
+router.post("/createBlog", createBlog)
+// router.put("/updateBlog/:id",upateBlog)
+router.delete("/deleteBlog/:id",deleteBlog)
 
 module.exports = router
