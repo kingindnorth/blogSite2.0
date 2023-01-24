@@ -1,8 +1,8 @@
 <!-- Page Header -->
 <header class="page-header page-header-mini">
-    <h1 class="title">Voluptates Corporis Placeat</h1>
+    <h1 class="title"><%= blog.title%></h1>
     <ol class="breadcrumb pb-0">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Voluptates Corporis Placeat</li>
     </ol>
 </header>
@@ -13,13 +13,13 @@
         <div class="page-content">
             <div class="card">
                 <div class="card-header pt-0">
-                    <h3 class="card-title mb-4">Voluptates Corporis Placeat</h3>
+                    <h3 class="card-title mb-4"><%= blog.title%></h3>
                     <div class="blog-media mb-4">
                         <img src="assets/imgs/blog-6.jpg" alt="" class="w-100">
-                        <a href="#" class="badge badge-primary">#Salupt</a> 
+                        <a href="#" class="badge badge-primary">#<%= blog.tag%></a> 
                     </div>  
                     <small class="small text-muted">
-                        <a href="#" class="text-muted">BY Admin</a>
+                        <a href="#" class="text-muted"><%= blog.user%></a>
                         <span class="px-2">·</span>
                         <span>January 24 2019</span>
                         <span class="px-2">·</span>

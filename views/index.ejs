@@ -1,6 +1,8 @@
-<!-- page-header -->
-<header class="page-header"></header>
-<!-- end of page header -->
+<!-- Page Header -->
+<header class="page-header page-header-mini">
+    <h1 class="title">BLOG HEADS</h1>
+</header>
+<!-- End Of Page Header -->
 
 <div class="container">
     <section>
@@ -9,7 +11,7 @@
                 <span>Featured Posts</span>
             </div>
             <% featuredBlogs.forEach(blog=>{%>
-                <a href="single-post.html" class="feature-post-item">
+                <a href=<%= `/${blog.id}`%> class="feature-post-item">
                     <img src= <%= `assets/imgs/${blog.image}` %>  class="w-100" alt="">
                     <div class="feature-post-caption"><%= blog.title%></div>
                 </a>
@@ -41,7 +43,7 @@
                 
                 <div class="card-footer d-flex justify-content-between align-items-center flex-basis-0">
                     <button class="btn btn-primary circle-35 mr-4"><i class="ti-back-right"></i></button>
-                    <a href="single-post.html" class="btn btn-outline-dark btn-sm">READ MORE</a>
+                    <a href= "" class="btn btn-outline-dark btn-sm">READ MORE</a>
                     <a href="#" class="text-dark small text-muted">By : Prajjawal Tiwari</a>
                 </div>                  
             </div>
@@ -66,7 +68,7 @@
                         </div>
                         
                         <div class="card-footer p-0 text-center">
-                            <a href="single-post.html" class="btn btn-outline-dark btn-sm">READ MORE</a>
+                            <a href=<%= `/${blog.id}`%> class="btn btn-outline-dark btn-sm">READ MORE</a>
                         </div>                  
                     </div>
                 </div>
@@ -149,7 +151,7 @@
             </div>  
 
             <figure class="figure mt-5">
-                <a href="single-post.html" class="figure-img">
+                <a href="/singlePost" class="figure-img">
                     <img src="assets/imgs/golang.png" alt="" class="w-100">
                     <figcaption class="figcaption">Go</figcaption>
                 </a>
@@ -157,7 +159,7 @@
 
             <h6 class="sidebar-title mt-5 mb-4">Popular Posts</h6>
             <div class="card mb-4">
-                <a href="single-post.html" class="overlay-link"></a>
+                <a href="/singlePost" class="overlay-link"></a>
                 <div class="card-header p-0">                                   
                     <div class="blog-media">
                         <img src="assets/imgs/openAI.png" alt="" class="w-100">
@@ -173,7 +175,7 @@
             </div>
 
             <div class="media text-left mb-4">
-                <a href="single-post.html" class="overlay-link"></a>
+                <a href="/singlePost" class="overlay-link"></a>
                 <img class="mr-3" src="assets/imgs/nodejs.png" width="100px" alt="Generic placeholder image">
                 <div class="media-body">
                     <h6 class="mt-0">NodeJS</h6>
@@ -182,7 +184,7 @@
                 </div>
             </div>
             <div class="media text-left mb-4">
-                <a href="single-post.html" class="overlay-link"></a>
+                <a href="/singlePost" class="overlay-link"></a>
                 <img class="mr-3" src="assets/imgs/reactjs.png" width="100px" alt="Generic placeholder image">
                 <div class="media-body">
                     <h6 class="mt-0">ReactJS</6>
@@ -191,7 +193,7 @@
                 </div>
             </div>
             <div class="media text-left mb-4">
-                <a href="single-post.html" class="overlay-link"></a>
+                <a href="/singlePost" class="overlay-link"></a>
                 <img class="mr-3" src="assets/imgs/nextjs.png" width="100px" alt="Generic placeholder image">
                 <div class="media-body">
                     <h6 class="mt-0">NextJS</h6>
@@ -203,5 +205,8 @@
                 <span href="#" class="font-weight-bold">ADS</span>
             </div>
         </div>
+    </div>
+    <div class="ad-card d-flex text-center align-items-center justify-content-center">
+        <span href="#" class="font-weight-bold">ADS</span>
     </div>
 </div>

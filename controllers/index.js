@@ -17,7 +17,12 @@ const getIndex = async(req,res) => {
 
 const getSinglePost = async(req,res) => {
     try{
-        res.status(200).render("singlePost")
+        const param = req.params.id
+        const blog = await Blog.findById(param)
+        res.status(200).render("singlePost",{
+            isAuthenticated: req.isAuthenticated(),
+            blog
+        })
     }catch(err){
         console.log(err)
         res.status(500).render("error/500")
