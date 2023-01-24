@@ -2,6 +2,7 @@ const Blog = require("../models/Blog")
 
 const createBlog = async(req,res) => {
     try{
+        console.log(req.user);
         const {
             title,
             desc,
