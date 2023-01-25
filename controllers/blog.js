@@ -3,20 +3,11 @@ const Blog = require("../models/Blog")
 const createBlog = async(req,res) => {
     try{
         console.log(req.user);
-        // const {
-        //     title,
-        //     desc,
-        //     data
-        // } = req.body
-
-        // const newBlog = await Blog.create({
-        //     title,
-        //     desc,
-        //     data
-        // })
-
+        const featuredBlogs = await Blog.find({featured:true})
+        const fb = featuredBlogs.slice(0,3)
         res.status(200).render("createBlog",{
             isAuthenticated:req.isAuthenticated(),
+            fb
         })
 
 
