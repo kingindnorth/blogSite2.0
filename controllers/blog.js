@@ -3,19 +3,21 @@ const Blog = require("../models/Blog")
 const createBlog = async(req,res) => {
     try{
         console.log(req.user);
-        const {
-            title,
-            desc,
-            data
-        } = req.body
+        // const {
+        //     title,
+        //     desc,
+        //     data
+        // } = req.body
 
-        const newBlog = await Blog.create({
-            title,
-            desc,
-            data
+        // const newBlog = await Blog.create({
+        //     title,
+        //     desc,
+        //     data
+        // })
+
+        res.status(200).render("createBlog",{
+            isAuthenticated:req.isAuthenticated(),
         })
-
-        res.json("blog created")
 
 
     }catch(err){
