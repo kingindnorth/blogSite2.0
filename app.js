@@ -36,9 +36,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //routes
-app.use("/",require("./routes/index"))
 app.use("/auth",require("./routes/auth"))
 app.use("/blogs", require("./routes/blog"))
+app.use("/",require("./routes/index"))
 
 const PORT = process.env.PORT || 3000
 
