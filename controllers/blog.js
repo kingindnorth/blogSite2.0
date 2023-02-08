@@ -17,6 +17,25 @@ const createBlog = async(req,res) => {
     }
 }
 
+const addBlog = async(req,res) => {
+    console.log("inside add blog");
+    try{
+        const blogs = await Blog.find()
+        const featuredBlogs = await Blog.find({featured:true})
+        const {title, data} = req.body
+        const blog =  await Blog.create({title,data})
+        console.log(blog)
+        res.status(200).render("index",{
+            isAuthenticated:req.isAuthenticated(),
+            blogs,
+            featuredBlogs
+        })
+    }catch(err){
+        console.log(err)
+        res.status(500).render("error/500")
+    }
+}
+
 const deleteBlog = async(req,res) => {
     try{
         const param = req.params.id
@@ -31,4 +50,4 @@ const deleteBlog = async(req,res) => {
     }
 }
 
-module.exports = {createBlog, deleteBlog}
+module.exports = {createBlog, addBlog}

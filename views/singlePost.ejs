@@ -86,12 +86,12 @@
                 <% tags.forEach(blog=>{ %>                    
                 <div class="col-md-6 col-lg-4 d-none d-lg-block">
                     <div class="card mb-5">
-                        <div class="card-header p-0">                                   
+                        <a href=<%= `/${blog.id}`%>><div class="card-header p-0">                                   
                             <div class="blog-media">
                                 <img src=<%= `/assets/imgs/${blog.image}`%> alt="" class="w-100">
                                 <a href="#" class="badge badge-primary">#<%= blog.tag%></a>       
                             </div>  
-                        </div>
+                        </div></a>
                         <div class="card-body px-0">
                             <h6 class="card-title mb-2"><%= blog.title%></h6>   
                             <small class="small text-muted">January 17 2019 
