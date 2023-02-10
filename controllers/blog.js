@@ -23,7 +23,7 @@ const addBlog = async(req,res) => {
         const blogs = await Blog.find()
         const featuredBlogs = await Blog.find({featured:true})
         const {title, data} = req.body
-        const blog =  await Blog.create({title,data})
+        const blog =  await (await Blog.create({title,data})).populate("user")
         console.log(blog)
         res.status(200).render("index",{
             isAuthenticated:req.isAuthenticated(),
