@@ -4,9 +4,9 @@ const User = require("../models/User")
 const googleStrategy = (passport) => {
     passport.use(
         new GoogleStrategy({
-            clientID: "",
-            clientSecret: "",
-            callbackURL: ""
+            clientID: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            callbackURL: process.env.GOOGLE_CALLBACK
         },async(accessToken, refreshToken, profile, done)=>{
             console.log(profile)
             const newUser = {

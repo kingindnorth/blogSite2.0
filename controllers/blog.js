@@ -20,10 +20,10 @@ const createBlog = async(req,res) => {
 const addBlog = async(req,res) => {
     console.log("inside add blog");
     try{
+        req.body.user = req.user.id
         const blogs = await Blog.find()
         const featuredBlogs = await Blog.find({featured:true})
-        const {title, data} = req.body
-        const blog =  await (await Blog.create({title,data})).populate("user")
+        const blog =  await Blog.create(req.body)
         console.log(blog)
         res.status(200).render("index",{
             isAuthenticated:req.isAuthenticated(),
